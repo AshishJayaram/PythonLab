@@ -1,0 +1,30 @@
+<Doctype !=HTML>
+<html>
+<body>
+<p>A Patient Database.</p>
+
+<p id="demo"><p>
+<script>
+    var myObj,i,j,x = "";
+    myObj = {
+        "name":[{"doctor":"John","patient":"Smith"},
+        {"doctor":"Sam","patient":"Sean"}],
+        
+        "disease":[
+        {"doctor":"John","patient":"Smith","name":"Fever","symptoms":["High body temp","Feeling cold","Headache"]},
+        {"name":"Jaundice","symptoms":["High Fever","Skin Yellowness"]}
+        ]
+    }
+    for (i in myObj.disease) {  
+        x += "<h2>"+myObj.disease[i].name + "</h2>";
+        for (j in myObj.disease[i].symptoms) {  
+            x += myObj.disease[i].symptoms[j] + "<br>";
+        }
+    }
+    document.getElementById("demo").innerHTML = x;
+    
+</script>
+
+<body>
+</body>
+</html>
